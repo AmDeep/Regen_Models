@@ -1,0 +1,92 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 1 -L 0.01 -R 1.0E-4 -E 1000 -C 0.001 -S 1 -output-debug-info -batch-size 200
+Relation:     regene-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    296
+Attributes:   24
+              age
+              trestbps
+              chol
+              thalach
+              oldpeak
+              slope
+              ca
+              target
+              asymptomatic
+              atypicalangina
+              nonanginalpain
+              typicalangina
+              highfbs
+              normalfbs
+              female
+              male
+              abnormal
+              normal
+              probable
+              eia
+              noteia
+              fixeddefect
+              normalthal
+              reversibledefect
+Test mode:    20-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Loss function: Log loss (logistic regression)
+
+Squared loss (linear regression)
+
+target = 
+
+         0.4611 (normalized) age
+ +      -2.3471 (normalized) trestbps
+ +      -2.0278 (normalized) chol
+ +       2.7535 (normalized) thalach
+ +      -2.1474 (normalized) oldpeak
+ +       1.4544 (normalized) slope
+ +      -3.8731 (normalized) ca
+ +      -1.1116 (normalized) asymptomatic=1
+ +      -0.2551 (normalized) atypicalangina=1
+ +       0.6219 (normalized) nonanginalpain=1
+ +       0.7853 (normalized) typicalangina=1
+ +       0.3236 (normalized) highfbs=1
+ +      -0.2831 (normalized) normalfbs=1
+ +       0.8195 (normalized) female=1
+ +      -0.7789 (normalized) male=1
+ +      -0.5149 (normalized) abnormal=1
+ +       0.5385 (normalized) normal=1
+ +       0.017  (normalized) probable=1
+ +      -0.3716 (normalized) eia=1
+ +       0.4122 (normalized) noteia=1
+ +       0.5074 (normalized) fixeddefect=1
+ +       0.4933 (normalized) normalthal=1
+ +      -0.9601 (normalized) reversibledefect=1
+ +       0.0407
+
+Time taken to build model: 0.41 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         252               85.1351 %
+Incorrectly Classified Instances        44               14.8649 %
+Kappa statistic                          0.6991
+Mean absolute error                      0.2165
+Root mean squared error                  0.3405
+Relative absolute error                 43.5922 %
+Root relative squared error             68.3196 %
+Total Number of Instances              296     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.801    0.106    0.865      0.801    0.832      0.701    0.909     0.902     0
+                 0.894    0.199    0.841      0.894    0.867      0.701    0.909     0.912     1
+Weighted Avg.    0.851    0.156    0.852      0.851    0.851      0.701    0.909     0.907     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 109  27 |   a = 0
+  17 143 |   b = 1
+
