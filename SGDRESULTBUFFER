@@ -1,0 +1,92 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     regene
+Instances:    296
+Attributes:   24
+              age
+              trestbps
+              chol
+              thalach
+              oldpeak
+              slope
+              ca
+              target
+              asymptomatic
+              atypicalangina
+              nonanginalpain
+              typicalangina
+              highfbs
+              normalfbs
+              female
+              male
+              abnormal
+              normal
+              probable
+              eia
+              noteia
+              fixeddefect
+              normalthal
+              reversibledefect
+Test mode:    15-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+Squared loss (linear regression)
+
+target = 
+
+         0.2931 (normalized) age
+ +      -1.4904 (normalized) trestbps
+ +      -1.2088 (normalized) chol
+ +       2.2485 (normalized) thalach
+ +      -1.0987 (normalized) oldpeak
+ +       1.4893 (normalized) slope
+ +      -3.2718 (normalized) ca
+ +      -0.7996 (normalized) asymptomatic=1
+ +      -0.3499 (normalized) atypicalangina=1
+ +       0.2798 (normalized) nonanginalpain=1
+ +       0.7396 (normalized) typicalangina=1
+ +       0.1799 (normalized) highfbs=1
+ +      -0.3099 (normalized) normalfbs=1
+ +       0.4998 (normalized) female=1
+ +      -0.6297 (normalized) male=1
+ +      -0.3698 (normalized) abnormal=1
+ +       0.3398 (normalized) normal=1
+ +      -0.1    (normalized) probable=1
+ +      -0.4698 (normalized) eia=1
+ +       0.3398 (normalized) noteia=1
+ +       0.3898 (normalized) fixeddefect=1
+ +       0.3898 (normalized) normalthal=1
+ +      -0.9096 (normalized) reversibledefect=1
+ -       0.13  
+
+Time taken to build model: 0.2 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         251               84.7973 %
+Incorrectly Classified Instances        45               15.2027 %
+Kappa statistic                          0.6914
+Mean absolute error                      0.152 
+Root mean squared error                  0.3899
+Relative absolute error                 30.6031 %
+Root relative squared error             78.2337 %
+Total Number of Instances              296     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.779    0.094    0.876      0.779    0.825      0.695    0.843     0.784     0
+                 0.906    0.221    0.829      0.906    0.866      0.695    0.843     0.802     1
+Weighted Avg.    0.848    0.162    0.850      0.848    0.847      0.695    0.843     0.794     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 106  30 |   a = 0
+  15 145 |   b = 1
+

@@ -1,0 +1,101 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 1 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1"
+Relation:     regene-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    296
+Attributes:   24
+              age
+              trestbps
+              chol
+              thalach
+              oldpeak
+              slope
+              ca
+              target
+              asymptomatic
+              atypicalangina
+              nonanginalpain
+              typicalangina
+              highfbs
+              normalfbs
+              female
+              male
+              abnormal
+              normal
+              probable
+              eia
+              noteia
+              fixeddefect
+              normalthal
+              reversibledefect
+Test mode:    15-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 1
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.1572 * (standardized) age
+ +      -0.3329 * (standardized) trestbps
+ +      -0.0804 * (standardized) chol
+ +       0.4823 * (standardized) thalach
+ +      -0.3483 * (standardized) oldpeak
+ +       0.4181 * (standardized) slope
+ +      -0.8969 * (standardized) ca
+ +      -0.3465 * (standardized) asymptomatic=1
+ +      -0.05   * (standardized) atypicalangina=1
+ +       0.2619 * (standardized) nonanginalpain=1
+ +       0.2763 * (standardized) typicalangina=1
+ +       0.0795 * (standardized) highfbs=1
+ +      -0.0795 * (standardized) normalfbs=1
+ +       0.2322 * (standardized) female=1
+ +      -0.2322 * (standardized) male=1
+ +       0      * (standardized) abnormal=1
+ +       0.0673 * (standardized) normal=1
+ +      -0.0673 * (standardized) probable=1
+ +      -0.1191 * (standardized) eia=1
+ +       0.1191 * (standardized) noteia=1
+ +       0.219  * (standardized) fixeddefect=1
+ +       0.2772 * (standardized) normalthal=1
+ +      -0.3903 * (standardized) reversibledefect=1
+ +       0.0926
+
+Number of kernel evaluations: 38000 (95.749% cached)
+
+
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         248               83.7838 %
+Incorrectly Classified Instances        48               16.2162 %
+Kappa statistic                          0.6717
+Mean absolute error                      0.1622
+Root mean squared error                  0.4027
+Relative absolute error                 32.6433 %
+Root relative squared error             80.7994 %
+Total Number of Instances              296     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.787    0.119    0.849      0.787    0.817      0.673    0.834     0.766     0
+                 0.881    0.213    0.829      0.881    0.855      0.673    0.834     0.795     1
+Weighted Avg.    0.838    0.170    0.839      0.838    0.837      0.673    0.834     0.782     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 107  29 |   a = 0
+  19 141 |   b = 1
+
